@@ -1,0 +1,30 @@
+print("This is the favorite quote of Aedin Richardson")
+print("\r")
+print("Motivation is like bathing. We recommend it daily.")
+
+
+
+
+
+
+# The first program in Python
+print('''##### #   # #   #''')
+print('''#     #   # #   #''')
+print('''##### #   # #   #''')
+print('''    # #   # #   #''')
+print('''##### ##### #####''')
+print()
+print('''We will che-er for the red and white, ''', end="")
+print('''of our fighting SUU!''')
+print('''Hear our battle cry, ''', end ="")
+print('''echo through the sky, ''', end="")
+print('''As our team comes blazing through!''')
+print('''They will fight, fight, fight, ''', end = "")
+print('''when they hear us shout, ''', end="")
+print('''As we sing our victory song.''')
+print('''We will run, we will score, ''', end="")
+print('''till the Thunder Roars, ''', end="")
+print('''And the T-Birds win once more!''')
+print('''Go, Go, Go,''')
+print('''Fight, Fight, Fight,''')
+print('''Win T-Birds!''')
