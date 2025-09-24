@@ -5,59 +5,57 @@ class Stack:
 
     def __init__(self):
         """Create new stack"""
-        self.top = None
+        self.head = None
 
     def __str__(self):
         """Returns a string representation of the stack, for example [a, b, c]"""
-        #The newest item is at the left
-        pass
+        c = []
+        d = self.head
+        while d != None:
+            c.append(str(d))
+            d = d.next
+        return ('[%s]' % ', '.join(c))
+        
 
     def push(self, item):
         """Add an item to the stack"""
-        newNode = Node(item)
-        newNode.next = self.top
-        self.top = newNode
+        tmp = Node(item)
+        tmp.next = self.head
+        self.head = tmp
 
     def pop(self):
         """Removes and returns an item from the stack"""
         #if there are no more items, a ValueError should be raised
-        top = self.top
-        if self.top:
-            self.top = None
-            return top
+        if self.head == None:
+            raise ValueError("No more items.")
         else:
-            raise ValueError("The stack is empty")
+            a = self.head.data
+            self.head = self.head.next
+            return a
 
     def is_empty(self):
         """Check if the stack is empty"""
-        if self.top:
+        if self.head == None:
             return True
         else:
             return False
-            
+
     def peek(self):
         """Get the value of the top item in the stack"""
         #if there are no more items None should be returned
-        if self.top:
-            return self.top
-        else:
+        if self.head == None:
             return None
+        else:
+            return self.head.data
 
     def size(self):
         """Get the number of items in the stack"""
-        """
         tmp = 0
-        nextNode = True
-        while nextNode:
-            if self.is_empty():
-                return tmp
-            elif """
-        pass
-            
+        b = self.head
+        while b != None:
+            tmp += 1
+            b = b.next
+        return tmp
 
-s = Stack()
-s.push("hi")
-s.push("hello")
-print(s.peek())
-s.pop()
-print(s.peek())
+
+#test 100, 1000, 1000000,1000000000 with push and pop
