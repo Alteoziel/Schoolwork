@@ -1,4 +1,5 @@
 from Node import Node
+import time
 
 class Stack:
     """Stack implementation using Nodes"""
@@ -58,4 +59,36 @@ class Stack:
         return tmp
 
 
-#test 100, 1000, 1000000,1000000000 with push and pop
+#test 1000, 10000, 100000,1000000 with push and pop
+s = Stack()
+start = time.time()
+for i in range(1,1001):
+    s.push(1)
+for i in range(1,1001):
+    s.pop()
+end = time.time()
+print(end-start)
+
+start = time.time()
+for i in range(1,10001):
+    s.push(1)
+for i in range(1,10001):
+    s.pop()
+end = time.time()
+print(end-start)
+
+start = time.time()
+for i in range(1,100001):
+    s.push(1)
+for i in range(1,100001):
+    s.pop()
+end = time.time()
+print(end-start)
+
+start = time.time()
+for i in range(1,1000001):
+    s.push(1)
+for i in range(1,1000001):
+    s.pop()
+end = time.time()
+print(end-start)
