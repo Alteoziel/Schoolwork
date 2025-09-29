@@ -76,6 +76,7 @@ q.enqueue(4)
 q.enqueue(5)
 print(q.size())
 print(q.is_empty())
+print(q)
 
 
 start = time.time()
@@ -109,4 +110,5 @@ for i in range(1,1000001):
     q.dequeue()
 end = time.time()
 print(end-start)
+
 
