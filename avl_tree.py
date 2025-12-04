@@ -155,6 +155,8 @@ class AVLTree(BinarySearchTree):
 
 bst = BinarySearchTree()
 
+print("AVL Ordered Insertion")
+
 avl = AVLTree()
 start = time.time()
 for i in range(1,1001):
@@ -188,7 +190,9 @@ t = end - start
 print(t)
 
 
+print("\n")
 
+print("AVL Random Insertion")
 
 avl = AVLTree()
 start = time.time()
@@ -218,6 +222,134 @@ avl = AVLTree()
 start = time.time()
 for i in range(1,1000001):
     avl.put(i,r.randint(1,1000001))
+end = time.time()
+t = end - start
+print(t)
+
+
+print("\n")
+
+
+print("AVL Random, then Ordered Search")
+avl = AVLTree()
+for i in range(1,10001):
+    avl.put(i,r.randint(1,10001))
+start = time.time()
+for i in range(1,1001):
+    avl[r.randint(1,1001)]
+end = time.time()
+t = end - start
+print(t)
+
+avl = AVLTree()
+for i in range(1,10001):
+    avl.put(i,i)
+start = time.time()
+for i in range(1,1001):
+    avl[r.randint(1,1001)]
+end = time.time()
+t = end - start
+print(t)
+
+
+print("\n")
+
+
+print("Binary Search Ordered Insertion")
+
+bst = BinarySearchTree()
+start = time.time()
+for i in range(1,1001):
+    bst.put(i,i)
+end = time.time()
+t = end - start
+print(t)
+
+bst = BinarySearchTree()
+start = time.time()
+for i in range(1,10001):
+    bst.put(i,i)
+end = time.time()
+t = end - start
+print(t)
+
+""" -> Took too long to calculate
+bst = BinarySearchTree()
+start = time.time()
+for i in range(1,100001):
+    bst.put(i,i)
+end = time.time()
+t = end - start
+print(t)
+
+bst = BinarySearchTree()
+start = time.time()
+for i in range(1,1000001):
+    bst.put(i,i)
+end = time.time()
+t = end - start
+print(t)
+"""
+
+print("\n")
+
+
+print("Binary Search Random Insertion")
+
+bst = BinarySearchTree()
+start = time.time()
+for i in range(1,1001):
+    bst.put(i,r.randint(1,1001))
+end = time.time()
+t = end - start
+print(t)
+
+bst = BinarySearchTree()
+start = time.time()
+for i in range(1,10001):
+    bst.put(i,r.randint(1,10001))
+end = time.time()
+t = end - start
+print(t)
+
+""" -> Took too long to calculate
+bst = BinarySearchTree()
+start = time.time()
+for i in range(1,100001):
+    bst.put(i,r.randint(1,100001))
+end = time.time()
+t = end - start
+print(t)
+
+bst = BinarySearchTree()
+start = time.time()
+for i in range(1,1000001):
+    bst.put(i,r.randint(1,1000001))
+end = time.time()
+t = end - start
+print(t)
+"""
+
+print("\n")
+
+
+print("Binary Search Random, then Ordered Search")
+bst = BinarySearchTree()
+for i in range(1,10001):
+    bst.put(i,r.randint(1,10001))
+start = time.time()
+for i in range(1,1001):
+    bst[r.randint(1,1001)]
+end = time.time()
+t = end - start
+print(t)
+
+bst = BinarySearchTree()
+for i in range(1,10001):
+    bst.put(i,i)
+start = time.time()
+for i in range(1,1001):
+    bst[r.randint(1,1001)]
 end = time.time()
 t = end - start
 print(t)
