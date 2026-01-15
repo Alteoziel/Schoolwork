@@ -1,5 +1,4 @@
 import random as ra
-import math
 
 def insertion_sort(A):
     for j in range(1,len(A)):
@@ -27,24 +26,23 @@ def reversedInsertionSort(A):
         A[i-1] = key
         #print(A)
 
-def merge(A,p,q,r):
-    n1 = q-p
+def merge(A,p,q,r): ???
+    n1 = q-p+1
     n2 = r-q
     L=[]
     R=[]
-    for n in range(0,n1):
-        L[n] = ra.randint(0,100)
-    for m in range(0,n2):
-        L[m] = ra.randint(0,100)
-    for i in range(0,n1):
-        L[i] = A[p+i]
-    for j in range(0,n2):
+    for n in range(1,n1+1):
+        L.append(n)
+    for m in range(1,n2+1):
+        R.append(m)
+    for i in range(1,n1):
+        L[i] = A[p+i-1]
+    for j in range(1,n2):
         R[j] = A[q+j]
-    L[n1] = math.inf
-    R[n2] = math.inf
-
-    i=0
-    j=0
+    L.append(float('inf'))
+    R.append(float('inf'))
+    i=1
+    j=1
     for k in range(p,r):
         if L[i]<=R[j]:
             A[k] = L[i]
@@ -52,19 +50,27 @@ def merge(A,p,q,r):
         elif A[k] == R[j]:
             j = j+1
 
+def bubblesort(A):
+    for i in range(1,len(A)-1):
+        for j in range(len(A)-1,i-1,-1):
+            if A[j] < A[j-1]:
+                tmp = A[j]
+                A[j] = A[j-1]
+                A[j-1] = tmp
 
 
 a = [1,4,8,9,5,3,5,1,8,96]
 insertion_sort(a)
-#print(a)
+print(a)
 
 b = [96,8,1,5,3,5,9,8,4,1]
 reversedInsertionSort(b)
-#print(b)
+print(b)
 
 c = [1,4,8,9,5,3,5,1,8,96]
-merge(c,1,5,96)
-print(c)
+merge(c,0,4,8)
+#print(c)
 
-
-
+d = [1,4,8,9,5,3,5,1,8,96]
+bubblesort(d)
+print(d)
