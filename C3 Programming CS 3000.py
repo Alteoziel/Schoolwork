@@ -12,7 +12,7 @@ n2 = 1000000
 n3 = 10000000 #30
 n4 = 20000000 #78
 n5 = 30000000 #
-"""
+
 sT = time.time()
 ran(n1)
 eT = time.time()
@@ -40,7 +40,7 @@ eT = time.time()
 t = eT-sT
 L.append(t)
 print(t)
-"""
+
 sT = time.time()
 ran(n5)
 eT = time.time()
