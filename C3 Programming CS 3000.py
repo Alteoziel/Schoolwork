@@ -6,9 +6,11 @@ def ran(n):
     return a*b
     
 
+L = []
 for i in range(0,3000000):
     sT = time.time()
     ran(i)
     eT = time.time()
     t = eT-sT
-    print(t)
+    L.append(t)
+print(L)
