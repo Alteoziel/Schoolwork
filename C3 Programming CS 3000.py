@@ -8,7 +8,7 @@ def ran(n):
 
 for i in range(0,1):
     sT = time.time()
-    ran(10000000)
+    ran(3000000)
     eT = time.time()
     t = eT-sT
     print(t)
