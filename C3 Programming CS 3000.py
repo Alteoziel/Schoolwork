@@ -7,10 +7,45 @@ def ran(n):
     
 
 L = []
-for i in range(0,3000000):
-    sT = time.time()
-    ran(i)
-    eT = time.time()
-    t = eT-sT
-    L.append(t)
+n1 = 100000
+n2 = 1000000 
+n3 = 10000000 #30
+n4 = 20000000 #78
+n5 = 30000000 #
+"""
+sT = time.time()
+ran(n1)
+eT = time.time()
+t = eT-sT
+L.append(t)
+print(t)
+
+sT = time.time()
+ran(n2)
+eT = time.time()
+t = eT-sT
+L.append(t)
+print(t)
+
+sT = time.time()
+ran(n3)
+eT = time.time()
+t = eT-sT
+L.append(t)
+print(t)
+
+sT = time.time()
+ran(n4)
+eT = time.time()
+t = eT-sT
+L.append(t)
+print(t)
+"""
+sT = time.time()
+ran(n5)
+eT = time.time()
+t = eT-sT
+L.append(t)
+print(t)
+
 print(L)
