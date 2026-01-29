@@ -1,4 +1,4 @@
-import csv
+import math
 
 def insertion_sort(A):
     for j in range(1,len(A)):
@@ -11,14 +11,30 @@ def insertion_sort(A):
 
 def bucket_sort(A):
     n = len(A)
-    B = [0] * n-1
-    for i in range(0,n-1):
+    B = [0] * (n)
+    C = []
+    for i in range(0,n):
         B[i] = []
     for i in range(0,n):
-        B[n//A[i]] = A[i]
-    for i in range(0,n-1):
+        m = A[i]
+        p = math.floor(int(n*m))
+        B[p].append(m)
+    for i in range(0,n):
         insertion_sort(B[i])
     for i in range(0,n):
-        C = C + B[i]
+        if B[i] != []:
+            C.extend(B[i])
+    print(C)
 
 
+p10list = []
+a = open("points_10.csv")
+for line in a:
+    b = line.split(",")
+    x = float(b[0])
+    y = float(b[1])
+    c2 =(x*x) + (y*y)
+    c = math.sqrt(c2)
+    p10list.append(c)
+
+bucket_sort(p10list)
