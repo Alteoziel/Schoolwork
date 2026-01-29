@@ -1,4 +1,4 @@
-import math
+import math, time as t
 
 def insertion_sort(A):
     for j in range(1,len(A)):
@@ -24,8 +24,13 @@ def bucket_sort(A):
     for i in range(0,n):
         if B[i] != []:
             C.extend(B[i])
-    print(C)
+    return C
 
+
+
+
+
+#bucket sort testing
 
 p10list = []
 a = open("points_10.csv")
@@ -36,5 +41,122 @@ for line in a:
     c2 =(x*x) + (y*y)
     c = math.sqrt(c2)
     p10list.append(c)
-
+    
+st = t.time()
 bucket_sort(p10list)
+et = t.time()
+print(et-st)
+
+p100list = []
+a = open("points_100.csv")
+for line in a:
+    b = line.split(",")
+    x = float(b[0])
+    y = float(b[1])
+    c2 =(x*x) + (y*y)
+    c = math.sqrt(c2)
+    p10list.append(c)
+
+st = t.time()
+bucket_sort(p100list)
+et = t.time()
+print(et-st)
+
+
+p1000list = []
+a = open("points_1000.csv")
+for line in a:
+    b = line.split(",")
+    x = float(b[0])
+    y = float(b[1])
+    c2 =(x*x) + (y*y)
+    c = math.sqrt(c2)
+    p10list.append(c)
+
+st = t.time()
+bucket_sort(p1000list)
+et = t.time()
+print(et-st)
+
+
+p100000list = []
+a = open("points_100000.csv")
+for line in a:
+    b = line.split(",")
+    x = float(b[0])
+    y = float(b[1])
+    c2 =(x*x) + (y*y)
+    c = math.sqrt(c2)
+    p10list.append(c)
+
+st = t.time()
+bucket_sort(p100000list)
+et = t.time()
+print(et-st)
+
+
+p10000000list = []
+a = open("points_10000000.csv")
+for line in a:
+    b = line.split(",")
+    x = float(b[0])
+    y = float(b[1])
+    c2 =(x*x) + (y*y)
+    c = math.sqrt(c2)
+    p10list.append(c)
+
+st = t.time()
+bucket_sort(p10000000list)
+et = t.time()
+print(et-st)
+
+
+
+
+#insertion sort testing
+
+p10list = []
+a = open("points_10.csv")
+for line in a:
+    b = line.split(",")
+    x = float(b[0])
+    y = float(b[1])
+    c2 =(x*x) + (y*y)
+    c = math.sqrt(c2)
+    p10list.append(c)
+    
+st = t.time()
+insertion_sort(p10list)
+et = t.time()
+print(et-st)
+
+p100list = []
+a = open("points_100.csv")
+for line in a:
+    b = line.split(",")
+    x = float(b[0])
+    y = float(b[1])
+    c2 =(x*x) + (y*y)
+    c = math.sqrt(c2)
+    p10list.append(c)
+
+st = t.time()
+insertion_sort(p100list)
+et = t.time()
+print(et-st)
+
+
+p1000list = []
+a = open("points_1000.csv")
+for line in a:
+    b = line.split(",")
+    x = float(b[0])
+    y = float(b[1])
+    c2 =(x*x) + (y*y)
+    c = math.sqrt(c2)
+    p10list.append(c)
+
+st = t.time()
+insertion_sort(p1000list)
+et = t.time()
+print(et-st)
