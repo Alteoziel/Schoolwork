@@ -42,5 +42,7 @@ with open("e.txt", "w") as eFile:
 
 N = (rand1-1)*(rand2-1)
 d = (e**-1)%(N)
+if d<0:
+    d+=N
 with open("d.txt", "w") as eFile:
     eFile.write(str(d))
