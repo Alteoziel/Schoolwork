@@ -1,3 +1,5 @@
+import random
+
 def modular_exponentiation(a,b,n):
     d = 1
     binary_b = bin(b)[2:]
@@ -22,12 +24,23 @@ def extended_euclid(a,b):
         [d,x,y] = [a,b,c-math.floor(a/b)*b]
         return [d,x,y]
 
+rand1 = random.randint(2**1021,2**1024)
+rand2 = random.randint(2**1021,2**1024)
 
-rand1 = random.randint(0,2**1024)
-rand2 = random.randint(0,2**1024)
-pseudoprime(rand1)
-pseudoprime(rand2)
+while pseudoprime(rand1) == False:
+    rand1 = random.randint(2**1021,2**1024)
+while pseudoprime(rand2) == False:
+    rand2 = random.randint(2**1021,2**1024)
 
 n = rand1*rand2
-e = (rand1-1)*(rand2-1)
+with open("n.txt", "w") as nFile:
+    nFile.write(str(n))
 
+e = 65537
+with open("e.txt", "w") as eFile:
+    eFile.write(str(e))
+
+N = (rand1-1)*(rand2-1)
+d = (e**-1)%(N)
+with open("d.txt", "w") as eFile:
+    eFile.write(str(d))
