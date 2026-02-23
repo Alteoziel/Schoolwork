@@ -1,3 +1,4 @@
+#Normally you wouldn't share this, but it was for the classwork, so we're good.
 f = open('encryptedWithPublic.txt', 'rb')
 fd = open('d.txt','r')
 fn = open('n.txt','r')
@@ -10,3 +11,4 @@ back_to_binary = P.to_bytes((P.bit_length() + 7)// 8, "big")
 f2 = open('encryptedWithPrivate.txt', 'wb')
 f2.write(back_to_binary)
 f2.close()
+
